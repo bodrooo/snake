@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="property/style-property.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <div class="container">
+    <canvas></canvas>
+    
+    <div class="btn">
+      <div class="btnControl">
+          <button id="up" type="button">↑</button>
+        <div class="notUp">
+          <button id="left" type="button">←</button>
+          <button id="down" type="button">↓</button>
+          <button id="right" type="button">→</button>
+        </div>
+      </div>
+        <button id="reset" class="fa fa-refresh" type="button"></button>
+        <button id="setting" type="button" class="fa fa-gear"></button>
+    </div>
+    <div id="menuSetting">
+      <div class="checkbox-option">
+        <div class="box" id="grid">
+           <label class="box-check">
+            <input type="checkbox" class="none">
+            <span class="checkmark"></span>
+          </label>
+          <p id="text-grid">Show Grid</p>
+        </div>
+      </div>
+      
+      <div class="button-option">
+        <label for="speed">
+          Speed: 
+          <select name="speed" id="speed">
+            <option value="lambat">Lambat</option>
+            <option value="lumayan">lumayan</option>
+            <option value="cepat">cepat</option>
+            <option value="sangatCepat">Sangat Cepat</option>
+          </select>
+          <p id="note">NOTE: You can choose the speed before starting the game and after you lose</p>
+        </label>
+      </div>
+      
+    </div>
+    <div id="loading">
+      <div class="bars">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+       <h1 class="corp">Kasiem Corp.</h1>
+    </div>
+    
+    <div id="landing-page">
+      <button type="button" id="run">Run Game</button>
+    </div>
+    <h3 class="footer">Create By Kasiem</h3>
+  </div>
+
+
+<audio src="asset/audio/eat.wav" id="eat"></audio>
+<audio src="asset/audio/lose.wav" id="lose"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
